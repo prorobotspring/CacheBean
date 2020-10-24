@@ -1,0 +1,5 @@
+[2015May21 09:52:02,412][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: CacheBean - VERSION: 1.1]
+[2015May21 09:52:02,434][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicio Cache con Inicializacion en EjbCreate - CacheBean]
+[2015May21 09:52:05,257][INFO ][][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
+[2015May21 09:52:55,094][INFO ][][ejbCreate CacheManagerBean.java:127][_E ejbCreate]
+[2015May21 10:57:43,239][INFO ][][ejbCreate CacheManagerBean.java:127][_E ejbCreate]

@@ -1,0 +1,3 @@
+[2020Sep10 10:05:33,649][INFO ][1599748310631][configurarLogger BSSIntLogger.java:67][APLICACION: CacheBean - VERSION: 1.1]
+[2020Sep10 10:05:33,653][INFO ][1599748310631][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicio Cache con Inicializacion en EjbCreate - CacheBean]
+[2020Sep10 10:05:37,007][INFO ][1599748310631][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]

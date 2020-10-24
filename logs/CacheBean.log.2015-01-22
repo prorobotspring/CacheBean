@@ -1,0 +1,137 @@
+[2015Jan22 09:15:02,774][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: CacheBean - VERSION: 1.1]
+[2015Jan22 09:15:02,796][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicio Cache con Inicializacion en EjbCreate - CacheBean]
+[2015Jan22 09:15:05,543][INFO ][][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
+[2015Jan22 09:16:28,054][ERROR][][ejbCreate CacheManagerBean.java:125][_M ejbCreate: error Initializing clientCache]
+AxisFault
+ faultCode: {http://schemas.xmlsoap.org/soap/envelope/}Server.userException
+ faultSubcode: 
+ faultString: java.io.IOException: chunked stream ended unexpectedly
+ faultActor: 
+ faultNode: 
+ faultDetail: 
+	{http://xml.apache.org/axis/}stackTrace:java.io.IOException: chunked stream ended unexpectedly
+	at org.apache.commons.httpclient.ChunkedInputStream.getChunkSizeFromInputStream(ChunkedInputStream.java:251)
+	at org.apache.commons.httpclient.ChunkedInputStream.nextChunk(ChunkedInputStream.java:220)
+	at org.apache.commons.httpclient.ChunkedInputStream.read(ChunkedInputStream.java:175)
+	at java.io.FilterInputStream.read(FilterInputStream.java:111)
+	at org.apache.commons.httpclient.AutoCloseInputStream.read(AutoCloseInputStream.java:107)
+	at java.io.FilterInputStream.read(FilterInputStream.java:111)
+	at weblogic.apache.xerces.impl.XMLEntityManager$RewindableInputStream.read(XMLEntityManager.java:3512)
+	at weblogic.apache.xerces.impl.io.UTF8Reader.read(UTF8Reader.java:327)
+	at weblogic.apache.xerces.impl.XMLEntityManager$EntityScanner.load(XMLEntityManager.java:3393)
+	at weblogic.apache.xerces.impl.XMLEntityManager$EntityScanner.skipString(XMLEntityManager.java:3173)
+	at weblogic.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:985)
+	at weblogic.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(XMLDocumentFragmentScannerImpl.java:1469)
+	at weblogic.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:329)
+	at weblogic.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:525)
+	at weblogic.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:581)
+	at weblogic.apache.xerces.parsers.XMLParser.parse(XMLParser.java:152)
+	at weblogic.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1175)
+	at weblogic.xml.jaxp.WebLogicXMLReader.parse(WebLogicXMLReader.java:135)
+	at weblogic.xml.jaxp.RegistryXMLReader.parse(RegistryXMLReader.java:152)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:345)
+	at org.apache.axis.encoding.DeserializationContext.parse(DeserializationContext.java:227)
+	at org.apache.axis.SOAPPart.getAsSOAPEnvelope(SOAPPart.java:696)
+	at org.apache.axis.Message.getSOAPEnvelope(Message.java:435)
+	at org.apache.axis.handlers.soap.MustUnderstandChecker.invoke(MustUnderstandChecker.java:62)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:206)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.comverse_in.prepaid.ccws.ServiceSoapStub.getCache(ServiceSoapStub.java:4838)
+	at la.integra.digitel.ccws.Util.newInstance(Util.java:33)
+	at la.integra.digitel.cache.CacheManagerBean.ejbCreate(CacheManagerBean.java:119)
+	at la.integra.digitel.cache.CacheManagerBean_9x8t4m_Impl.ejbCreate(CacheManagerBean_9x8t4m_Impl.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at weblogic.ejb20.pool.StatelessSessionPool.createBean(StatelessSessionPool.java:172)
+	at weblogic.ejb20.pool.StatelessSessionPool.getBean(StatelessSessionPool.java:110)
+	at weblogic.ejb20.manager.StatelessManager.preInvoke(StatelessManager.java:140)
+	at weblogic.ejb20.internal.BaseEJBObject.preInvoke(BaseEJBObject.java:152)
+	at weblogic.ejb20.internal.StatelessEJBObject.preInvoke(StatelessEJBObject.java:82)
+	at la.integra.digitel.cache.CacheManagerBean_9x8t4m_EOImpl.getObjectByKey(CacheManagerBean_9x8t4m_EOImpl.java:133)
+	at la.integra.digitel.cache.CacheManagerBean_9x8t4m_EOImpl_WLSkel.invoke(Unknown Source)
+	at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:492)
+	at weblogic.rmi.cluster.ReplicaAwareServerRef.invoke(ReplicaAwareServerRef.java:108)
+	at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:435)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.rmi.internal.BasicServerRef.handleRequest(BasicServerRef.java:430)
+	at weblogic.rmi.internal.BasicExecuteRequest.execute(BasicExecuteRequest.java:35)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+
+	{http://xml.apache.org/axis/}hostname:cfglobd05.corp.digitel.com.ve
+
+java.io.IOException: chunked stream ended unexpectedly
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.SOAPPart.getAsSOAPEnvelope(SOAPPart.java:701)
+	at org.apache.axis.Message.getSOAPEnvelope(Message.java:435)
+	at org.apache.axis.handlers.soap.MustUnderstandChecker.invoke(MustUnderstandChecker.java:62)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:206)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.comverse_in.prepaid.ccws.ServiceSoapStub.getCache(ServiceSoapStub.java:4838)
+	at la.integra.digitel.ccws.Util.newInstance(Util.java:33)
+	at la.integra.digitel.cache.CacheManagerBean.ejbCreate(CacheManagerBean.java:119)
+	at la.integra.digitel.cache.CacheManagerBean_9x8t4m_Impl.ejbCreate(CacheManagerBean_9x8t4m_Impl.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at weblogic.ejb20.pool.StatelessSessionPool.createBean(StatelessSessionPool.java:172)
+	at weblogic.ejb20.pool.StatelessSessionPool.getBean(StatelessSessionPool.java:110)
+	at weblogic.ejb20.manager.StatelessManager.preInvoke(StatelessManager.java:140)
+	at weblogic.ejb20.internal.BaseEJBObject.preInvoke(BaseEJBObject.java:152)
+	at weblogic.ejb20.internal.StatelessEJBObject.preInvoke(StatelessEJBObject.java:82)
+	at la.integra.digitel.cache.CacheManagerBean_9x8t4m_EOImpl.getObjectByKey(CacheManagerBean_9x8t4m_EOImpl.java:133)
+	at la.integra.digitel.cache.CacheManagerBean_9x8t4m_EOImpl_WLSkel.invoke(Unknown Source)
+	at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:492)
+	at weblogic.rmi.cluster.ReplicaAwareServerRef.invoke(ReplicaAwareServerRef.java:108)
+	at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:435)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.rmi.internal.BasicServerRef.handleRequest(BasicServerRef.java:430)
+	at weblogic.rmi.internal.BasicExecuteRequest.execute(BasicExecuteRequest.java:35)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+Caused by: java.io.IOException: chunked stream ended unexpectedly
+	at org.apache.commons.httpclient.ChunkedInputStream.getChunkSizeFromInputStream(ChunkedInputStream.java:251)
+	at org.apache.commons.httpclient.ChunkedInputStream.nextChunk(ChunkedInputStream.java:220)
+	at org.apache.commons.httpclient.ChunkedInputStream.read(ChunkedInputStream.java:175)
+	at java.io.FilterInputStream.read(FilterInputStream.java:111)
+	at org.apache.commons.httpclient.AutoCloseInputStream.read(AutoCloseInputStream.java:107)
+	at java.io.FilterInputStream.read(FilterInputStream.java:111)
+	at weblogic.apache.xerces.impl.XMLEntityManager$RewindableInputStream.read(XMLEntityManager.java:3512)
+	at weblogic.apache.xerces.impl.io.UTF8Reader.read(UTF8Reader.java:327)
+	at weblogic.apache.xerces.impl.XMLEntityManager$EntityScanner.load(XMLEntityManager.java:3393)
+	at weblogic.apache.xerces.impl.XMLEntityManager$EntityScanner.skipString(XMLEntityManager.java:3173)
+	at weblogic.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:985)
+	at weblogic.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(XMLDocumentFragmentScannerImpl.java:1469)
+	at weblogic.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:329)
+	at weblogic.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:525)
+	at weblogic.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:581)
+	at weblogic.apache.xerces.parsers.XMLParser.parse(XMLParser.java:152)
+	at weblogic.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1175)
+	at weblogic.xml.jaxp.WebLogicXMLReader.parse(WebLogicXMLReader.java:135)
+	at weblogic.xml.jaxp.RegistryXMLReader.parse(RegistryXMLReader.java:152)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:345)
+	at org.apache.axis.encoding.DeserializationContext.parse(DeserializationContext.java:227)
+	at org.apache.axis.SOAPPart.getAsSOAPEnvelope(SOAPPart.java:696)
+	... 32 more
+[2015Jan22 09:16:28,074][INFO ][][ejbCreate CacheManagerBean.java:127][_E ejbCreate]
+[2015Jan22 09:41:14,105][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: CacheBean - VERSION: 1.1]
+[2015Jan22 09:41:14,126][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicio Cache con Inicializacion en EjbCreate - CacheBean]
+[2015Jan22 09:41:17,229][INFO ][][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
+[2015Jan22 09:43:02,781][INFO ][][ejbCreate CacheManagerBean.java:127][_E ejbCreate]
+[2015Jan22 15:45:23,507][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: CacheBean - VERSION: 1.1]
+[2015Jan22 15:45:23,526][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicio Cache con Inicializacion en EjbCreate - CacheBean]
+[2015Jan22 15:45:26,024][INFO ][][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
+[2015Jan22 15:45:58,678][INFO ][][ejbCreate CacheManagerBean.java:127][_E ejbCreate]

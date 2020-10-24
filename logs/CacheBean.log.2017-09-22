@@ -1,0 +1,8 @@
+[2017Sep22 10:53:41,176][INFO ][1506093774102][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
+[2017Sep22 10:59:05,046][INFO ][1506093774102][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
+[2017Sep22 11:07:36,629][INFO ][1506094653294][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
+[2017Sep22 11:09:50,002][INFO ][1506094653294][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
+[2017Sep22 11:49:12,342][INFO ][1506096436313][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
+[2017Sep22 14:08:53,694][INFO ][1506096436313][configurarLogger BSSIntLogger.java:67][APLICACION: CacheBean - VERSION: 1.1]
+[2017Sep22 14:08:53,696][INFO ][1506096436313][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicio Cache con Inicializacion en EjbCreate - CacheBean]
+[2017Sep22 14:08:56,655][INFO ][1506096436313][ejbCreate CacheManagerBean.java:118][_I initializating Client Cache ]
